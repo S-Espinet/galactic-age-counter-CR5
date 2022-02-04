@@ -7,7 +7,9 @@ export class AgeInYears {
     this.jupiterAge = "jupiterAge";
   }
 
-  mercuryYears() {
-
+  mercuryYears(age) {
+    age = parseInt(age);
+    if (isNaN(age) === true)
+    return "Please enter a valid number."
   }
 }
