@@ -17,7 +17,7 @@ describe('mercuryYears', () => {
     let age = new AgeInYears();
     expect(age.mercuryYears("lorem ipsum")).toEqual("Please enter a valid number.")
   });
-  test('should return number of years in Mercury years', () => {
+  test('should return age in Mercury years', () => {
     let age = new AgeInYears();
     expect(age.mercuryYears("35")).toEqual(8.4);
   })
