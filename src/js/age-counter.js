@@ -17,8 +17,12 @@ export class AgeInYears {
     }
   }
 
-  mercuryLifeExpectancy() {
-    
+  mercuryLifeExpectancy(age) {
+    let ageOfPersonOnMercury = this.mercuryYears(age)
+    const mercuryMax = 303
+    if (ageOfPersonOnMercury <= mercuryMax) {
+      return mercuryMax - ageOfPersonOnMercury;
+    }
   }
 
   venusYears(age) {
