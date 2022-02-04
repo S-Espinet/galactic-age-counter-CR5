@@ -29,4 +29,8 @@ describe ('venusYears', () => {
     let age = new AgeInYears();
     expect(age.venusYears("Etiam non")).toEqual("Please enter a valid number.");
   });
+  test('should return age in Venus years', () => {
+    let age = new AgeInYears();
+    expect(age.venusYears("35")).toEqual(21.7);
+  })
 });
