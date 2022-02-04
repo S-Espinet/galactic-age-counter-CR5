@@ -31,6 +31,9 @@ export class AgeInYears {
     if (isNaN(age) === true) {
       return "Please enter a valid number."
     }
+    else {
+      return age * 1.88
+    }
   }
 }
 
