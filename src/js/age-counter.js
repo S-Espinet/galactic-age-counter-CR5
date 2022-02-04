@@ -36,8 +36,11 @@ export class AgeInYears {
     }
   }
 
-  jupiterYears() {
-    
+  jupiterYears(age) {
+    age = parseInt(age);
+    if (isNaN(age) === true) {
+      return "Please enter a valid number."
+    }
   }
 }
 
