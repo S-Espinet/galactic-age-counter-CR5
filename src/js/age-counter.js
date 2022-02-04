@@ -35,5 +35,9 @@ export class AgeInYears {
       return age / this.marsAge
     }
   }
+
+  jupiterYears() {
+    
+  }
 }
 

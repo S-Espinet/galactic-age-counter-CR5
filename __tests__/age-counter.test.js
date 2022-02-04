@@ -46,3 +46,11 @@ describe ('marsYears', () => {
     expect(age.marsYears("35")).toBeLessThanOrEqual(19);
   })
 });
+
+describe ('jupiterYears', () => {
+
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterYears("Donec et")).toEqual("Please enter a valid number.");
+  });
+});
