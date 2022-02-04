@@ -9,10 +9,10 @@ export class AgeInYears {
   mercuryYears(age) {
     age = parseInt(age);
     if (isNaN(age) === true) {
-    return "Please enter a valid number."
+      return "Please enter a valid number."
     }
     else {
-      return age * 0.24
+      return age * .24
     }
   }
 
@@ -22,7 +22,12 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age * 0.62
+      return age * .62
     }
   }
+
+  marsYears() {
+
+  }
 }
+

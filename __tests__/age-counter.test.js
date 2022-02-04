@@ -34,3 +34,11 @@ describe ('venusYears', () => {
     expect(age.venusYears("35")).toEqual(21.7);
   })
 });
+
+describe ('marsYears', () => {
+
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.marsYears("Vestibulum risus")).toEqual("Please enter a valid number.");
+  });
+});
