@@ -41,4 +41,8 @@ describe ('marsYears', () => {
     let age = new AgeInYears();
     expect(age.marsYears("Vestibulum risus")).toEqual("Please enter a valid number.");
   });
+  test('should return age in Mars years', () => {
+    let age = new AgeInYears();
+    expect(age.marsYears("35")).toEqual(65.8);
+  })
 });
