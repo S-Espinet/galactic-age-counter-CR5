@@ -16,7 +16,10 @@ export class AgeInYears {
     }
   }
 
-  venusYears() {
-
+  venusYears(age) {
+    age = parseInt(age);
+    if (isNaN(age) === true) {
+      return "Please enter a valid number."
+    }
   }
 }
