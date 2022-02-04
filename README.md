@@ -1,4 +1,4 @@
-# Application\_Title
+# Galactic\_Age\_Counter
 
 #### By _**S-Espinet**_
 
