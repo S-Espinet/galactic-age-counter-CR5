@@ -12,7 +12,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age * .24
+      return age / .24
     }
   }
 
@@ -22,7 +22,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age * .62
+      return age / .62
     }
   }
 
@@ -32,7 +32,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age * 1.88
+      return age / 1.88
     }
   }
 }
