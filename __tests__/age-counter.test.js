@@ -4,10 +4,10 @@ describe ('AgeInYears', () => {
 
   test('should correctly create an AgeInYears class with 4 properties', () => {
     let age = new AgeInYears ();
-    expect(age.mercuryAge).toEqual("mercuryAge");
-    expect(age.venusAge).toEqual("venusAge");
-    expect(age.marsAge).toEqual("marsAge");
-    expect(age.jupiterAge).toEqual("jupiterAge");
+    expect(age.mercuryAge).toEqual(.24);
+    expect(age.venusAge).toEqual(.62);
+    expect(age.marsAge).toEqual(1.88);
+    expect(age.jupiterAge).toEqual(11.86);
   });
 });
 

@@ -1,9 +1,9 @@
 export class AgeInYears {
   constructor() {
-    this.mercuryAge = "mercuryAge";
-    this.venusAge = "venusAge";
-    this.marsAge = "marsAge";
-    this.jupiterAge = "jupiterAge";
+    this.mercuryAge = .24;
+    this.venusAge = .62;
+    this.marsAge = 1.88;
+    this.jupiterAge = 11.86;
   }
 
   mercuryYears(age) {
@@ -12,7 +12,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / .24
+      return age / this.mercuryAge
     }
   }
 
@@ -22,7 +22,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / .62
+      return age / this.venusAge
     }
   }
 
@@ -32,7 +32,7 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / 1.88
+      return age / this.marsAge
     }
   }
 }
