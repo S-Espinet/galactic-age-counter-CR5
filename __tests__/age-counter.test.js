@@ -53,4 +53,8 @@ describe ('jupiterYears', () => {
     let age = new AgeInYears();
     expect(age.jupiterYears("Donec et")).toEqual("Please enter a valid number.");
   });
+  test('should return age in Jupiter years', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterYears("35")).toBeLessThanOrEqual(3);
+  })
 });
