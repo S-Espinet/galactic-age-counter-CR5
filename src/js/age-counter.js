@@ -26,8 +26,11 @@ export class AgeInYears {
     }
   }
 
-  marsYears() {
-
+  marsYears(age) {
+    age = parseInt(age);
+    if (isNaN(age) === true) {
+      return "Please enter a valid number."
+    }
   }
 }
 
