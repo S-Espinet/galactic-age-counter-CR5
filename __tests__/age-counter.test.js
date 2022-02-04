@@ -22,3 +22,11 @@ describe('mercuryYears', () => {
     expect(age.mercuryYears("35")).toEqual(8.4);
   })
 });
+
+describe ('venusYears', () => {
+
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.venusYears("Etiam non")).toEqual("Please enter a valid number.");
+  });
+});

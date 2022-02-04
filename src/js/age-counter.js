@@ -15,4 +15,8 @@ export class AgeInYears {
       return age * 0.24
     }
   }
+
+  venusYears() {
+
+  }
 }
