@@ -12,8 +12,13 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / this.mercuryAge
+      let ageOnMercury = Math.round(age / this.mercuryAge)
+      return ageOnMercury
     }
+  }
+
+  mercuryLifeExpectancy() {
+
   }
 
   venusYears(age) {

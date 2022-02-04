@@ -19,9 +19,17 @@ describe('mercuryYears', () => {
   });
   test('should return age in Mercury years', () => {
     let age = new AgeInYears();
-    expect(age.mercuryYears("35")).toBeLessThanOrEqual(146);
+    expect(age.mercuryLifeExpectancy("35")).toEqual(146);
   })
 });
+
+describe ('mercuryLifeExpectancy', () => {
+
+  test('should return Mercury years left if age less than or equal to 303', () => {
+    let age = new AgeInYears();
+    expect(age.mercuryLifeExpectancy("35")).toEqual(157) 
+  })
+})
 
 describe ('venusYears', () => {
 
