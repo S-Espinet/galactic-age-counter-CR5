@@ -1,6 +1,5 @@
 export class AgeInYears {
   constructor() {
-    this.earthAge = "earthAge"
     this.mercuryAge = "mercuryAge";
     this.venusAge = "venusAge";
     this.marsAge = "marsAge";
@@ -9,7 +8,11 @@ export class AgeInYears {
 
   mercuryYears(age) {
     age = parseInt(age);
-    if (isNaN(age) === true)
+    if (isNaN(age) === true) {
     return "Please enter a valid number."
+    }
+    else {
+      return age * 0.24
+    }
   }
 }
