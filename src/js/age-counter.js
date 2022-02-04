@@ -17,17 +17,14 @@ export class AgeInYears {
     }
   }
 
-  mercuryLifeExpectancy() {
-
-  }
-
   venusYears(age) {
     age = parseInt(age);
     if (isNaN(age) === true) {
       return "Please enter a valid number."
     }
     else {
-      return age / this.venusAge
+      let ageOnVenus = Math.round(age / this.venusAge);
+      return ageOnVenus
     }
   }
 
@@ -37,7 +34,8 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / this.marsAge
+      let ageOnMars = Math.round(age / this.marsAge);
+      return ageOnMars
     }
   }
 
@@ -47,7 +45,8 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     else {
-      return age / this.jupiterAge
+      let ageOnJupiter = Math.round(age / this.jupiterAge);
+      return ageOnJupiter
     }
   }
 }
