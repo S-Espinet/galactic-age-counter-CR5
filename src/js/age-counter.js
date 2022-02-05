@@ -79,6 +79,9 @@ export class AgeInYears {
     if (yearsOnMars <= marsMax) {
     return marsMax - yearsOnMars;
     }
+    else {
+      return yearsOnMars - marsMax;
+    }
   }
 
   jupiterYears(age) {
