@@ -60,7 +60,7 @@ describe('venusLife', () => {
 
   test('should return error message if inputted age is not a number', () => {
     let age = new AgeInYears();
-    expect(age.venusLife("lorem ipsum", "70")).toEqual("Please enter a valid number.")
+    expect(age.venusLife("Etiam non", "70")).toEqual("Please enter a valid number.")
   });
 
   test('should return error message if inputted life expectancy is not a number', () => {
@@ -90,6 +90,11 @@ describe ('marsYears', () => {
 });
 
 describe('marsLife', () => {
+
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.marsLife("Vestibulum risus", "70")).toEqual("Please enter a valid number.")
+  });
 
   test('should return error message if inputted life expectancy is not a number', () => {
     let age = new AgeInYears();
