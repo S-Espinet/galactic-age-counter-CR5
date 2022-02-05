@@ -69,6 +69,10 @@ export class AgeInYears {
     }
   }
 
+  marsLife() {
+
+  }
+
   jupiterYears(age) {
     age = parseInt(age);
     if (isNaN(age) === true) {

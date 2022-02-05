@@ -55,7 +55,7 @@ describe('venusLife', () => {
 
   test('should return error message if inputted life expectancy is not a number', () => {
     let age = new AgeInYears();
-    expect(age.venusLife("35", "lorem ipsum")).toEqual("Please enter a valid number.")
+    expect(age.venusLife("35", "Etiam non")).toEqual("Please enter a valid number.")
   });
   test('should return number of Venus years left to live if age in Venus years is less than life expectancy in Venus years', () => {
     let age = new AgeInYears();
@@ -77,6 +77,14 @@ describe ('marsYears', () => {
     let age = new AgeInYears();
     expect(age.marsYears("35")).toBeLessThanOrEqual(19);
   })
+});
+
+describe('marsLife', () => {
+
+  test('should return error message if inputted life expectancy is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.marsLife("35", "Vestubulum risus")).toEqual("Please enter a valid number.")
+  });
 });
 
 describe ('jupiterYears', () => {
