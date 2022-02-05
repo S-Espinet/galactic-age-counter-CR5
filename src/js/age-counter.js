@@ -22,6 +22,10 @@ export class AgeInYears {
     if (isNaN(lifeExpectancy) === true) {
       return "Please enter a valid number."
     }
+    let yearsOnMercury = this.mercuryYears(age);
+    const mercuryMax = Math.round(lifeExpectancy / .24);
+    if (yearsOnMercury <= mercuryMax);
+    return mercuryMax - yearsOnMercury;
   }
 
   venusYears(age) {
