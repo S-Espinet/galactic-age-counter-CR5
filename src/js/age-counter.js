@@ -52,6 +52,9 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     let yearsOnVenus = this.venusYears(age);
+    if (isNaN(yearsOnVenus) === true) {
+      return yearsOnVenus;
+    }
     const venusMax = Math.round(lifeExpectancy / .62);
     if (yearsOnVenus <= venusMax) {
     return venusMax - yearsOnVenus;
