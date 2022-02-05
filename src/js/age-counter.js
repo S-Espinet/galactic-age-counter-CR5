@@ -100,5 +100,10 @@ export class AgeInYears {
     if (isNaN(lifeExpectancy) === true) {
       return "Please enter a valid number."
     }
+    let yearsOnJupiter = this.jupiterYears(age);
+    const jupiterMax = Math.round(lifeExpectancy / 11.86);
+    if (yearsOnJupiter <= jupiterMax) {
+    return jupiterMax - yearsOnJupiter;
+    }
   }
 }
