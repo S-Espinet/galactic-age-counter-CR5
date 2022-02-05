@@ -105,5 +105,8 @@ export class AgeInYears {
     if (yearsOnJupiter <= jupiterMax) {
     return jupiterMax - yearsOnJupiter;
     }
+    else {
+      return yearsOnJupiter - jupiterMax;
+    }
   }
 }
