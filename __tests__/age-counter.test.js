@@ -30,7 +30,7 @@ describe('mercuryLife', () => {
     expect(age.mercuryLife("35", "lorem ipsum")).toEqual("Please enter a valid number.")
   });
 
-  test('should return number of years left to live if age is less than life expectancy in Mercury years', () => {
+  test('should return number of years left to live if age in Mercury years is less than life expectancy in Mercury years', () => {
     let age = new AgeInYears();
     expect(age.mercuryLife("35", "70")).toEqual(146)
   })
