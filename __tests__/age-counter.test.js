@@ -117,4 +117,8 @@ describe('jupiterLife', () => {
     let age = new AgeInYears();
     expect(age.jupiterLife("35", "70")).toEqual(3)
   });
+  test('should return number of Jupiter years past Jupiter life expectancy one has lived if age in Jupiter years is greater than life expectancy in Jupiter years', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterLife("80", "72")).toEqual(1);
+  });
 });
