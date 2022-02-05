@@ -81,6 +81,9 @@ export class AgeInYears {
       return "Please enter a valid number."
     }
     let yearsOnMars = this.marsYears(age);
+    if (isNaN(yearsOnMars) === true) {
+      return yearsOnMars;
+    }
     const marsMax = Math.round(lifeExpectancy / 1.88);
     if (yearsOnMars <= marsMax) {
     return marsMax - yearsOnMars;
