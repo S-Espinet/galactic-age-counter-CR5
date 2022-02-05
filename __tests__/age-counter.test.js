@@ -124,6 +124,11 @@ describe ('jupiterYears', () => {
 
 describe('jupiterLife', () => {
 
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterLife("Donec et", "70")).toEqual("Please enter a valid number.")
+  });
+
   test('should return error message if inputted life expectancy is not a number', () => {
     let age = new AgeInYears();
     expect(age.jupiterLife("35", "Donec et")).toEqual("Please enter a valid number.")
