@@ -53,6 +53,9 @@ export class AgeInYears {
     if (yearsOnVenus <= venusMax) {
     return venusMax - yearsOnVenus;
     }
+    else {
+      return yearsOnVenus - venusMax;
+    }
   }
 
   marsYears(age) {
