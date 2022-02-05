@@ -95,7 +95,10 @@ export class AgeInYears {
     }
   }
 
-  jupiterLife() {
-    
+  jupiterLife(age, lifeExpectancy) {
+    lifeExpectancy = parseInt(lifeExpectancy);
+    if (isNaN(lifeExpectancy) === true) {
+      return "Please enter a valid number."
+    }
   }
 }
