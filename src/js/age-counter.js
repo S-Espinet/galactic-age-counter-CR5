@@ -43,8 +43,11 @@ export class AgeInYears {
     }
   }
 
-  venusLife() {
-
+  venusLife(age, lifeExpectancy) {
+    lifeExpectancy = parseInt(lifeExpectancy);
+    if (isNaN(lifeExpectancy) === true) {
+      return "Please enter a valid number."
+    }
   }
 
   marsYears(age) {
