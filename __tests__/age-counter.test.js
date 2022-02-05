@@ -89,6 +89,10 @@ describe('marsLife', () => {
     let age = new AgeInYears();
     expect(age.marsLife("35", "70")).toEqual(18)
   });
+  test('should return number of Mars years past Mars life expectancy one has lived if age in Mars years is greater than life expectancy in Mars years', () => {
+    let age = new AgeInYears();
+    expect(age.marsLife("75", "72")).toEqual(2);
+  });
 });
 
 describe ('jupiterYears', () => {
