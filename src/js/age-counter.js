@@ -24,8 +24,9 @@ export class AgeInYears {
     }
     let yearsOnMercury = this.mercuryYears(age);
     const mercuryMax = Math.round(lifeExpectancy / .24);
-    if (yearsOnMercury <= mercuryMax);
+    if (yearsOnMercury <= mercuryMax) {
     return mercuryMax - yearsOnMercury;
+    }
   }
 
   venusYears(age) {
