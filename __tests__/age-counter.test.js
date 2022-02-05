@@ -25,11 +25,15 @@ describe('mercuryYears', () => {
 
 describe ('mercuryLifeExpectancy', () => {
 
+  test('should return error message if inputted age is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.mercuryLifeExpectancy("lorem ipsum")).toEqual("Please enter a valid number.");
+  });
   test('should return Mercury years left if age less than or equal to 303', () => {
     let age = new AgeInYears();
     expect(age.mercuryLifeExpectancy("35")).toEqual(157) 
-  })
-})
+  });
+});
 
 describe ('venusYears', () => {
 
