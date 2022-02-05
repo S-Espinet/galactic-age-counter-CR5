@@ -83,7 +83,11 @@ describe('marsLife', () => {
 
   test('should return error message if inputted life expectancy is not a number', () => {
     let age = new AgeInYears();
-    expect(age.marsLife("35", "Vestubulum risus")).toEqual("Please enter a valid number.")
+    expect(age.marsLife("35", "Vestibulum risus")).toEqual("Please enter a valid number.")
+  });
+  test('should return number of Mars years left to live if age in Mars years is less than life expectancy in Mars years', () => {
+    let age = new AgeInYears();
+    expect(age.marsLife("35", "70")).toEqual(18)
   });
 });
 
