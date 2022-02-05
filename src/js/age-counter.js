@@ -18,6 +18,10 @@ export class AgeInYears {
   }
 
   mercuryLifeExpectancy(age) {
+    age = parseInt(age);
+    if (isNaN(age) === true) {
+      return "Please enter a valid number."
+    }
     let ageOfPersonOnMercury = this.mercuryYears(age)
     const mercuryMax = 303
     if (ageOfPersonOnMercury <= mercuryMax) {
