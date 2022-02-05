@@ -27,6 +27,9 @@ export class AgeInYears {
     if (yearsOnMercury <= mercuryMax) {
     return mercuryMax - yearsOnMercury;
     }
+    else {
+      return yearsOnMercury - mercuryMax;
+    }
   }
 
   venusYears(age) {
@@ -38,6 +41,10 @@ export class AgeInYears {
       let ageOnVenus = Math.round(age / this.venusAge);
       return ageOnVenus
     }
+  }
+
+  venusLife() {
+
   }
 
   marsYears(age) {
