@@ -106,3 +106,11 @@ describe ('jupiterYears', () => {
     expect(age.jupiterYears("35")).toBeLessThanOrEqual(3);
   })
 });
+
+describe('jupiterLife', () => {
+
+  test('should return error message if inputted life expectancy is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterLife("35", "Donec et")).toEqual("Please enter a valid number.")
+  });
+});

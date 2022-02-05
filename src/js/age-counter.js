@@ -94,4 +94,8 @@ export class AgeInYears {
       return ageOnJupiter
     }
   }
+
+  jupiterLife() {
+    
+  }
 }
