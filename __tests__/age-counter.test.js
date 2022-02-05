@@ -23,6 +23,14 @@ describe('mercuryYears', () => {
   })
 });
 
+describe('mercuryLife', () => {
+
+  test('should return error message if inputted life expectancy is not a number', () => {
+    let age = new AgeInYears();
+    expect(age.mercuryLife("35", "lorem ipsum")).toEqual("Please enter a valid number.")
+  });
+});
+
 describe ('venusYears', () => {
 
   test('should return error message if inputted age is not a number', () => {

@@ -17,6 +17,10 @@ export class AgeInYears {
     }
   }
 
+  mercuryLife() {
+
+  }
+
   venusYears(age) {
     age = parseInt(age);
     if (isNaN(age) === true) {
