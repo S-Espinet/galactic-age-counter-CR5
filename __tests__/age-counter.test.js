@@ -113,4 +113,8 @@ describe('jupiterLife', () => {
     let age = new AgeInYears();
     expect(age.jupiterLife("35", "Donec et")).toEqual("Please enter a valid number.")
   });
+  test('should return number of Jupiter years left to live if age in Jupiter years is less than life expectancy in Jupiter years', () => {
+    let age = new AgeInYears();
+    expect(age.jupiterLife("35", "70")).toEqual(3)
+  });
 });
