@@ -142,3 +142,6 @@ describe('jupiterLife', () => {
     expect(age.jupiterLife("80", "72")).toEqual(1);
   });
 });
+
+//planetYears is not specifically tested here because it just contains mercuryYears, venusYears, marsYears, and jupiterYears, which are tested
+//planetLife is not specifically tested here for because it just contains mercuryLife, venusLife, marsLife, and jupiterLife, which are tested

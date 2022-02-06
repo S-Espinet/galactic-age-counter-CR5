@@ -6,119 +6,64 @@ export class AgeInYears {
     this.jupiterAge = 11.86;
   }
 
-  mercuryYears(age) {
+  planetYears(age, ageFactor) {
     age = parseInt(age);
     if (isNaN(age) === true) {
-      return "Please enter a valid number."
+      return "Please enter a valid number.";
     }
     else {
-      let ageOnMercury = Math.round(age / this.mercuryAge)
-      return ageOnMercury
+      let ageOnPlanet = Math.round(age / ageFactor);
+      return ageOnPlanet;
     }
+  }
+
+  planetLife(age, ageFactor, lifeExpectancy) {
+    lifeExpectancy = parseInt(lifeExpectancy);
+    if (isNaN(lifeExpectancy) === true) {
+      return "Please enter a valid number."
+    }
+    if (isNaN(age) === true) {
+      return "Please enter a valid number.";
+    }
+    let yearsOnPlanet = this.planetYears(age, ageFactor);
+    const planetMax = Math.round(lifeExpectancy / ageFactor);
+    if (yearsOnPlanet <= planetMax) {
+    return planetMax - yearsOnPlanet;
+    }
+    else {
+      return yearsOnPlanet - planetMax;
+    }
+  }
+
+  mercuryYears(age) {
+    return this.planetYears(age, this.mercuryAge);
   }
 
   mercuryLife(age, lifeExpectancy) {
-    lifeExpectancy = parseInt(lifeExpectancy);
-    if (isNaN(lifeExpectancy) === true) {
-      return "Please enter a valid number."
-    }
-    let yearsOnMercury = this.mercuryYears(age);
-    if (isNaN(yearsOnMercury) === true) {
-      return yearsOnMercury;
-    }
-    const mercuryMax = Math.round(lifeExpectancy / .24);
-    if (yearsOnMercury <= mercuryMax) {
-    return mercuryMax - yearsOnMercury;
-    }
-    else {
-      return yearsOnMercury - mercuryMax;
-    }
+    return this.planetLife(age, this.mercuryAge, lifeExpectancy)
   }
 
   venusYears(age) {
-    age = parseInt(age);
-    if (isNaN(age) === true) {
-      return "Please enter a valid number."
-    }
-    else {
-      let ageOnVenus = Math.round(age / this.venusAge);
-      return ageOnVenus
-    }
+    return this.planetYears(age, this.venusAge);
   }
 
   venusLife(age, lifeExpectancy) {
-    lifeExpectancy = parseInt(lifeExpectancy);
-    if (isNaN(lifeExpectancy) === true) {
-      return "Please enter a valid number."
-    }
-    let yearsOnVenus = this.venusYears(age);
-    if (isNaN(yearsOnVenus) === true) {
-      return yearsOnVenus;
-    }
-    const venusMax = Math.round(lifeExpectancy / .62);
-    if (yearsOnVenus <= venusMax) {
-    return venusMax - yearsOnVenus;
-    }
-    else {
-      return yearsOnVenus - venusMax;
-    }
+    return this.planetLife(age, this.venusAge, lifeExpectancy)
   }
 
   marsYears(age) {
-    age = parseInt(age);
-    if (isNaN(age) === true) {
-      return "Please enter a valid number."
-    }
-    else {
-      let ageOnMars = Math.round(age / this.marsAge);
-      return ageOnMars
-    }
+    return this.planetYears(age, this.marsAge);
   }
 
   marsLife(age, lifeExpectancy) {
-    lifeExpectancy = parseInt(lifeExpectancy);
-    if (isNaN(lifeExpectancy) === true) {
-      return "Please enter a valid number."
-    }
-    let yearsOnMars = this.marsYears(age);
-    if (isNaN(yearsOnMars) === true) {
-      return yearsOnMars;
-    }
-    const marsMax = Math.round(lifeExpectancy / 1.88);
-    if (yearsOnMars <= marsMax) {
-    return marsMax - yearsOnMars;
-    }
-    else {
-      return yearsOnMars - marsMax;
-    }
+    return this.planetLife(age, this.marsAge, lifeExpectancy)
   }
 
   jupiterYears(age) {
-    age = parseInt(age);
-    if (isNaN(age) === true) {
-      return "Please enter a valid number."
-    }
-    else {
-      let ageOnJupiter = Math.round(age / this.jupiterAge);
-      return ageOnJupiter
-    }
+    return this.planetYears(age, this.jupiterAge);
   }
 
   jupiterLife(age, lifeExpectancy) {
-    lifeExpectancy = parseInt(lifeExpectancy);
-    if (isNaN(lifeExpectancy) === true) {
-      return "Please enter a valid number."
-    }
-    let yearsOnJupiter = this.jupiterYears(age);
-    if (isNaN(yearsOnJupiter) === true) {
-      return yearsOnJupiter;
-    }
-    const jupiterMax = Math.round(lifeExpectancy / 11.86);
-    if (yearsOnJupiter <= jupiterMax) {
-    return jupiterMax - yearsOnJupiter;
-    }
-    else {
-      return yearsOnJupiter - jupiterMax;
-    }
+    return this.planetLife(age, this.jupiterAge, lifeExpectancy)
   }
 }
